@@ -3,7 +3,9 @@ pipeline {
     stages{
         stage('Build'){
             steps {
-                sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/localMaven/apache-maven-3.5.3/bin/mvn clean package'
+                #sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/localMaven/apache-maven-3.5.3/bin/mvn clean package'
+                sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/localMaven/bin/mvn clean package'
+                sh 'mvn clean package'
             }
             post {
                 success {
