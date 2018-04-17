@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Build'){
             steps {
-                sh 'mvn clean package'
+                sh 'export JAVA_HOME=/stuff/java/jdk1.8.0_161;/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/localMaven/bin/mvn clean package'
             }
             post {
                 success {
